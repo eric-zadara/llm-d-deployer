@@ -344,6 +344,16 @@
               "description": "Security settings for a Pod.  The security settings that you specify for a Pod apply to all Containers in the Pod. \u003cbr /\u003e Ref: https://kubernetes.io/docs/tasks/configure-pod-container/security-context/#set-the-security-context-for-a-pod",
               "required": []
             },
+            "runtimeClassName": {
+              "default": "",
+              "description": "Set the runtime class \u003cbr /\u003e Ref: https://kubernetes.io/docs/concepts/containers/runtime-class/",
+              "items": {
+                "$ref": "https://raw.githubusercontent.com/yannh/kubernetes-json-schema/master/master/_definitions.json#/definitions/io.k8s.api.node.v1.RuntimeClass",
+                "required": []
+              },
+              "required": [],
+              "title": "runtimeClassName"
+            },
             "tolerations": {
               "description": "Node tolerations for server scheduling to nodes with taints \u003cbr /\u003e Ref: https://kubernetes.io/docs/concepts/scheduling-eviction/taint-and-toleration/",
               "items": {
@@ -957,6 +967,16 @@
               "description": "Security settings for a Pod.  The security settings that you specify for a Pod apply to all Containers in the Pod. \u003cbr /\u003e Ref: https://kubernetes.io/docs/tasks/configure-pod-container/security-context/#set-the-security-context-for-a-pod",
               "required": []
             },
+            "runtimeClassName": {
+              "default": "",
+              "description": "Set the runtime class \u003cbr /\u003e Ref: https://kubernetes.io/docs/concepts/containers/runtime-class/",
+              "items": {
+                "$ref": "https://raw.githubusercontent.com/yannh/kubernetes-json-schema/master/master/_definitions.json#/definitions/io.k8s.api.node.v1.RuntimeClass",
+                "required": []
+              },
+              "required": [],
+              "title": "runtimeClassName"
+            },
             "tolerations": {
               "description": "Node tolerations for server scheduling to nodes with taints \u003cbr /\u003e Ref: https://kubernetes.io/docs/concepts/scheduling-eviction/taint-and-toleration/",
               "items": {
@@ -1241,6 +1261,16 @@
               "$ref": "https://raw.githubusercontent.com/yannh/kubernetes-json-schema/master/master/_definitions.json#/definitions/io.k8s.api.core.v1.SecurityContext",
               "description": "Security settings for a Pod.  The security settings that you specify for a Pod apply to all Containers in the Pod. \u003cbr /\u003e Ref: https://kubernetes.io/docs/tasks/configure-pod-container/security-context/#set-the-security-context-for-a-pod",
               "required": []
+            },
+            "runtimeClassName": {
+              "default": "",
+              "description": "Set the runtime class \u003cbr /\u003e Ref: https://kubernetes.io/docs/concepts/containers/runtime-class/",
+              "items": {
+                "$ref": "https://raw.githubusercontent.com/yannh/kubernetes-json-schema/master/master/_definitions.json#/definitions/io.k8s.api.node.v1.RuntimeClass",
+                "required": []
+              },
+              "required": [],
+              "title": "runtimeClassName"
             },
             "tolerations": {
               "description": "Node tolerations for server scheduling to nodes with taints \u003cbr /\u003e Ref: https://kubernetes.io/docs/concepts/scheduling-eviction/taint-and-toleration/",

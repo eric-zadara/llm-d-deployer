@@ -43,6 +43,9 @@ data:
           tolerations:
             {{- include "common.tplvalues.render" ( dict "value" .Values.modelservice.decode.tolerations "context" $) | nindent 12 }}
           {{- end }}
+          {{- if .Values.modelservice.decode.runtimeClassName }}
+          runtimeClassName: {{ .Values.modelservice.decode.runtimeClassName | quote }}
+          {{- end }}
           initContainers:
             - name: routing-proxy
               image: {{ include "modelservice.routingProxyImage" . }}
@@ -108,6 +111,9 @@ data:
           {{- if .Values.modelservice.prefill.tolerations }}
           tolerations:
             {{- include "common.tplvalues.render" ( dict "value" .Values.modelservice.prefill.tolerations "context" $) | nindent 12 }}
+          {{- end }}
+          {{- if .Values.modelservice.prefill.runtimeClassName }}
+          runtimeClassName: {{ .Values.modelservice.prefill.runtimeClassName | quote }}
           {{- end }}
           containers:
             - name: vllm
@@ -221,6 +227,9 @@ data:
           {{- if .Values.modelservice.epp.tolerations }}
           tolerations:
             {{- include "common.tplvalues.render" ( dict "value" .Values.modelservice.epp.tolerations "context" $) | nindent 12 }}
+          {{- end }}
+          {{- if .Values.modelservice.epp.runtimeClassName }}
+          runtimeClassName: {{ .Values.modelservice.epp.runtimeClassName | quote }}
           {{- end }}
           containers:
             - args:

@@ -512,6 +512,13 @@ modelservice:
     # <br /> Ref: https://kubernetes.io/docs/concepts/scheduling-eviction/taint-and-toleration/
     tolerations: []
 
+    # @schema
+    # items:
+    #   $ref: https://raw.githubusercontent.com/yannh/kubernetes-json-schema/master/master/_definitions.json#/definitions/io.k8s.api.node.v1.RuntimeClass
+    # @schema
+    # -- Set the runtime class
+    # <br /> Ref: https://kubernetes.io/docs/concepts/containers/runtime-class/
+    runtimeClassName: ''
 
     # -- Enable metrics gathering via podMonitor / ServiceMonitor
     metrics:
@@ -675,6 +682,14 @@ modelservice:
         operator: Exists
         effect: NoSchedule
 
+    # @schema
+    # items:
+    #   $ref: https://raw.githubusercontent.com/yannh/kubernetes-json-schema/master/master/_definitions.json#/definitions/io.k8s.api.node.v1.RuntimeClass
+    # @schema
+    # -- Set the runtime class
+    # <br /> Ref: https://kubernetes.io/docs/concepts/containers/runtime-class/
+    runtimeClassName: ''
+
     # -- vLLM container settings
     vllm:
 
@@ -746,6 +761,14 @@ modelservice:
       - key: nvidia.com/gpu
         operator: Exists
         effect: NoSchedule
+
+    # @schema
+    # items:
+    #   $ref: https://raw.githubusercontent.com/yannh/kubernetes-json-schema/master/master/_definitions.json#/definitions/io.k8s.api.node.v1.RuntimeClass
+    # @schema
+    # -- Set the runtime class
+    # <br /> Ref: https://kubernetes.io/docs/concepts/containers/runtime-class/
+    runtimeClassName: ''
 
     # -- vLLM container settings
     vllm:

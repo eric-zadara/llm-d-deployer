@@ -178,6 +178,7 @@ Kubernetes: `>= 1.30.0-0`
 | modelservice.decode.containerSecurityContext | Security settings for a Container. <br /> Ref: https://kubernetes.io/docs/tasks/configure-pod-container/security-context/#set-the-security-context-for-a-container | object | `{}` |
 | modelservice.decode.nodeSelector | Node labels for pod assignment <br /> Ref: https://kubernetes.io/docs/concepts/scheduling-eviction/assign-pod-node/#nodeselector | object | `{}` |
 | modelservice.decode.podSecurityContext | Security settings for a Pod.  The security settings that you specify for a Pod apply to all Containers in the Pod. <br /> Ref: https://kubernetes.io/docs/tasks/configure-pod-container/security-context/#set-the-security-context-for-a-pod | object | `{}` |
+| modelservice.decode.runtimeClassName | Set the runtime class <br /> Ref: https://kubernetes.io/docs/concepts/containers/runtime-class/ | string | `""` |
 | modelservice.decode.tolerations | Node tolerations for server scheduling to nodes with taints <br /> Ref: https://kubernetes.io/docs/concepts/scheduling-eviction/taint-and-toleration/ | list | `[{"effect":"NoSchedule","key":"nvidia.com/gpu","operator":"Exists"}]` |
 | modelservice.decode.tolerations[0] | default NVIDIA GPU toleration | object | `{"effect":"NoSchedule","key":"nvidia.com/gpu","operator":"Exists"}` |
 | modelservice.decode.topologySpreadConstraints | Topology Spread Constraints for pod assignment <br /> Ref: https://kubernetes.io/docs/concepts/scheduling-eviction/assign-pod-node/#pod-topology-spread-constraints | list | `[]` |
@@ -207,6 +208,7 @@ Kubernetes: `>= 1.30.0-0`
 | modelservice.epp.metrics.serviceMonitor.selector | ServiceMonitor selector matchLabels </br> matchLabels must match labels on modelservice Services | object | `{"matchLabels":{}}` |
 | modelservice.epp.nodeSelector | Node labels for pod assignment <br /> Ref: https://kubernetes.io/docs/concepts/scheduling-eviction/assign-pod-node/#nodeselector | object | `{}` |
 | modelservice.epp.podSecurityContext | Security settings for a Pod.  The security settings that you specify for a Pod apply to all Containers in the Pod. <br /> Ref: https://kubernetes.io/docs/tasks/configure-pod-container/security-context/#set-the-security-context-for-a-pod | object | `{}` |
+| modelservice.epp.runtimeClassName | Set the runtime class <br /> Ref: https://kubernetes.io/docs/concepts/containers/runtime-class/ | string | `""` |
 | modelservice.epp.tolerations | Node tolerations for server scheduling to nodes with taints <br /> Ref: https://kubernetes.io/docs/concepts/scheduling-eviction/taint-and-toleration/ | list | `[]` |
 | modelservice.epp.topologySpreadConstraints | Topology Spread Constraints for pod assignment <br /> Ref: https://kubernetes.io/docs/concepts/scheduling-eviction/assign-pod-node/#pod-topology-spread-constraints | list | `[]` |
 | modelservice.fullnameOverride | String to fully override modelservice.fullname | string | `""` |
@@ -244,6 +246,7 @@ Kubernetes: `>= 1.30.0-0`
 | modelservice.prefill.containerSecurityContext | Security settings for a Container. <br /> Ref: https://kubernetes.io/docs/tasks/configure-pod-container/security-context/#set-the-security-context-for-a-container | object | `{}` |
 | modelservice.prefill.nodeSelector | Node labels for pod assignment <br /> Ref: https://kubernetes.io/docs/concepts/scheduling-eviction/assign-pod-node/#nodeselector | object | `{}` |
 | modelservice.prefill.podSecurityContext | Security settings for a Pod.  The security settings that you specify for a Pod apply to all Containers in the Pod. <br /> Ref: https://kubernetes.io/docs/tasks/configure-pod-container/security-context/#set-the-security-context-for-a-pod | object | `{}` |
+| modelservice.prefill.runtimeClassName | Set the runtime class <br /> Ref: https://kubernetes.io/docs/concepts/containers/runtime-class/ | string | `""` |
 | modelservice.prefill.tolerations | Node tolerations for server scheduling to nodes with taints <br /> Ref: https://kubernetes.io/docs/concepts/scheduling-eviction/taint-and-toleration/ | list | `[{"effect":"NoSchedule","key":"nvidia.com/gpu","operator":"Exists"}]` |
 | modelservice.prefill.tolerations[0] | default NVIDIA GPU toleration | object | `{"effect":"NoSchedule","key":"nvidia.com/gpu","operator":"Exists"}` |
 | modelservice.prefill.topologySpreadConstraints | Topology Spread Constraints for pod assignment <br /> Ref: https://kubernetes.io/docs/concepts/scheduling-eviction/assign-pod-node/#pod-topology-spread-constraints | list | `[]` |
